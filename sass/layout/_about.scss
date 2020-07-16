@@ -1,0 +1,227 @@
+// Section Intro
+.section-intro {
+    padding-top: 10vh;
+    width: 95%;
+    margin: 10vh auto;
+    min-height: 90vh;
+
+    @include flex( row, center, center);
+}
+.intro {
+    
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    h2 {
+        display: inline-block;
+        font-size: 6rem;
+        padding-top: 2rem;
+        
+
+        animation: intro-greeting 2s ease;
+    }
+    #my-name {
+        // display: inline-block;
+        background: $gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: intro-greeting 2s ease;
+    }
+
+    h3 {
+        font-size: 4rem;
+        padding: 2rem 0;
+        animation: intro-greeting 4s ease;
+    }
+
+
+}
+
+.intro-text {
+    flex: 1 1 45rem;
+    
+}
+
+.intro-image {   
+    flex: 1 1 45rem;
+
+    svg {
+        // display: block;
+        max-width: 100%;
+        max-height: 100%;
+
+        
+    }
+}
+
+// Section Hero
+.section-hero {
+    min-height: 70vh;
+
+    @include flex( row, center, center);
+
+    background: $gradient;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+    @include mediaQuery(phone-plas) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+.hero {
+    
+    @include flex(row, space-around, center);
+
+    @include mediaQuery(phone-plas) {
+        @include flex(column, space-around, center);
+
+    }
+}
+.hero-image {
+    
+    flex: 0 0 40%;
+    
+    
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+    @include mediaQuery(phone-plas) {
+        width: 60%;   
+    }
+    @include mediaQuery(phone) {
+        width: 100%;  
+        img {
+            border-radius: 0;
+        } 
+    }
+}
+.hero-text {
+    
+    
+    flex: 0 0 40%;
+    
+    color: white;
+    h2 {
+        text-align: center;
+        padding: 2rem 0;
+        letter-spacing: .2rem;
+    }
+
+    p {
+        line-height: 1.5;
+        letter-spacing: .1rem;
+        padding: 2rem 0;
+    }
+
+    @include mediaQuery(phone-plas) {
+        width: 85%;   
+    }
+}
+// Section section-skills
+.section-skills {
+    min-height: 70vh;
+    
+    @include flex(row, center, center);
+
+    .container {
+        width: 100%;
+    }
+
+}
+.skills {
+    
+    margin: 3rem auto;
+    @include flex(row, space-around, flex-end);
+
+    @include mediaQuery(phone-plas) {
+            @include flex( column, space-between, center);
+            width: 85%;   
+    }
+    
+    .skill-box {
+        flex: 0 0 30%;
+        
+        padding-bottom: 1rem;
+        border-bottom: none;
+        
+        
+       
+        @include flex( row, space-between, flex-end);
+
+        @include mediaQuery(phone-plas) {
+            width: 85%;
+            margin: 2rem auto;
+            border-bottom: 1px solid $social-text;
+
+            align-items: center;
+        }
+       
+        ul li {
+            font-variant: small-caps;
+            color: $social-text;
+            &.degree {
+                font-size: $text-small;
+            }
+        }
+        }
+
+        .outer {
+            writing-mode: tb-rl;
+            @include flex(row, center, flex-end);
+        }
+        .text-to-top {
+            
+            text-transform: uppercase;
+            transform: rotate(180deg);
+            letter-spacing: .3rem;
+            font-weight: bold;
+        }
+}
+
+// Animation
+#react-icon {
+    animation: react 25s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#clock-arrow {
+    animation: clock 5s linear infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#person-body {
+    animation: programmer-body 3s ease infinite alternate;
+    transform-origin: bottom;
+}
+
+#moustache {
+    animation: moustache 2s infinite alternate;
+    transform-origin: bottom;
+}
+
+#glasses {
+    animation: glasses 3s infinite alternate 1s;
+}
+
+
+@media (max-width: 1200px) {
+   
+    .intro-image {
+        text-align: center;
+    } 
+    .intro-image svg{     
+        height: 80%;         
+    }
+}
+@media (max-width: 900px) {
+     .intro-text {
+        text-align: center;
+    }
+    
+}

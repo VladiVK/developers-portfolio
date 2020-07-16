@@ -1,0 +1,39 @@
+
+.section-contacts {
+    min-height: 60vh;
+    padding-top: 10vh;
+    margin: 10vh auto;
+
+    @include flex(row, center, center);
+}
+.contacts {
+    padding: 3rem 5rem;
+    @include flex(column, center, flex-start);
+    
+
+    .contacts-text {
+        width: 100%;
+        text-transform: capitalize;
+        color: $social-text;
+        font-weight: 300;
+        margin: 1rem 0;
+        
+    }
+    .contacts-email {
+        
+        color: $social-text;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .contacts-buttons-box {
+        
+        @include flex(row, flex-start, center);
+        width: 100%;
+
+        a {
+            flex: 0 0 8rem;
+        }
+    }
+}

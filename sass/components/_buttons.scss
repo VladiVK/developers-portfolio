@@ -1,0 +1,38 @@
+.btn-link {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    margin: 2rem 0;
+    background: $gradient;
+    color: white;
+    font-weight: 700;
+    border-radius: .3rem;
+
+    animation: intro-btn 1.5s ease;
+    
+    &:hover {
+        outline: none;
+
+        background-image:linear-gradient(to right, transparent 0%, rgb(0, 255, 55) 50%, rgb(0, 204, 255) 100%);
+        transform: scale(.9, .9);
+        transition: all 1s;
+    }
+}
+.btn-link-small {
+    display: inline-block;
+    padding: .8rem 1rem;
+    margin: 1rem .5rem 1rem 0;
+    background: $gradient;
+    color: white;
+    border-radius: .3rem;
+    font-size: 1.5rem;
+
+    animation: intro-btn 1.5s ease;
+    
+    &:hover {
+        outline: none;
+
+        background-image:linear-gradient(to right, transparent 0%, rgb(0, 255, 55) 50%, rgb(0, 204, 255) 100%);
+        transform: scale(.9, .9);
+        transition: all 1s;
+    }
+}

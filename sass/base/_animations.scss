@@ -1,0 +1,69 @@
+
+//Programmer SVG 
+
+@keyframes programmer-body {
+    from {
+        transform: rotateZ(-.7deg);
+    }
+    to {
+        transform: rotateZ(.7deg);
+    }
+}
+
+@keyframes react {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes clock {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes glasses {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(-.3%);
+    }
+}
+
+@keyframes moustache {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(-.3%);
+    }
+}
+@keyframes intro-greeting {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes intro-btn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
